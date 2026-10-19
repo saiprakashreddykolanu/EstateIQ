@@ -1,0 +1,69 @@
+{
+    "algorithm": "KMeans",
+    "version": "1.0",
+    "segmentation_level": "ZIP code",
+    "n_clusters": 2,
+    "silhouette_score": 0.3590925157930326,
+    "features": [
+        "median_price",
+        "median_price_per_sqft",
+        "median_sqft_living",
+        "median_grade",
+        "median_bathrooms",
+        "waterfront_rate",
+        "renovation_rate"
+    ],
+    "cluster_names": {
+        "0": "Core Market",
+        "1": "High-Value Market"
+    },
+    "candidate_results": [
+        {
+            "k": 2,
+            "silhouette": 0.3590925157930326,
+            "inertia": 319.74398643073505
+        },
+        {
+            "k": 3,
+            "silhouette": 0.34375710080647465,
+            "inertia": 249.75188894551047
+        },
+        {
+            "k": 4,
+            "silhouette": 0.3588536287670686,
+            "inertia": 195.6044741584171
+        },
+        {
+            "k": 5,
+            "silhouette": 0.3580322781121211,
+            "inertia": 145.9803537635544
+        },
+        {
+            "k": 6,
+            "silhouette": 0.32342552219981197,
+            "inertia": 117.42813105757982
+        }
+    ],
+    "cluster_summary": [
+        {
+            "market_cluster": 0,
+            "zip_codes": 44,
+            "properties": 13994,
+            "median_price": 363749.75,
+            "median_price_per_sqft": 206.58697672883468,
+            "median_sqft_living": 1722.5,
+            "median_grade": 7.0,
+            "median_waterfront_rate": 0.0
+        },
+        {
+            "market_cluster": 1,
+            "zip_codes": 26,
+            "properties": 7591,
+            "median_price": 663737.5,
+            "median_price_per_sqft": 288.90956213450255,
+            "median_sqft_living": 2282.0,
+            "median_grade": 8.0,
+            "median_waterfront_rate": 0.0
+        }
+    ]
+}

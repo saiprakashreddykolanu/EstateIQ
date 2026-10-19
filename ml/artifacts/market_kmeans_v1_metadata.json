@@ -1,0 +1,65 @@
+{
+    "algorithm": "KMeans",
+    "version": "1.0",
+    "n_clusters": 4,
+    "features": [
+        "price",
+        "sqft_living",
+        "sqft_lot",
+        "bedrooms",
+        "bathrooms",
+        "grade",
+        "condition",
+        "lat",
+        "long"
+    ],
+    "silhouette_score": 0.18334405640748272,
+    "cluster_labels": {
+        "1": "Value Market",
+        "2": "Mid Market",
+        "3": "Premium Market",
+        "0": "Luxury Market"
+    },
+    "profiles": [
+        {
+            "market_cluster": 0,
+            "properties": 5371,
+            "median_price": 789500.0,
+            "median_sqft": 3020.0,
+            "median_lot": 9374.0,
+            "median_bedrooms": 4.0,
+            "median_bathrooms": 2.75,
+            "median_grade": 9.0
+        },
+        {
+            "market_cluster": 1,
+            "properties": 6764,
+            "median_price": 325000.0,
+            "median_sqft": 1910.0,
+            "median_lot": 8200.0,
+            "median_bedrooms": 3.0,
+            "median_bathrooms": 2.25,
+            "median_grade": 7.0
+        },
+        {
+            "market_cluster": 2,
+            "properties": 9124,
+            "median_price": 430000.0,
+            "median_sqft": 1470.0,
+            "median_lot": 6127.0,
+            "median_bedrooms": 3.0,
+            "median_bathrooms": 1.75,
+            "median_grade": 7.0
+        },
+        {
+            "market_cluster": 3,
+            "properties": 326,
+            "median_price": 590000.0,
+            "median_sqft": 2705.0,
+            "median_lot": 219316.5,
+            "median_bedrooms": 3.0,
+            "median_bathrooms": 2.5,
+            "median_grade": 8.0
+        }
+    ]
+}

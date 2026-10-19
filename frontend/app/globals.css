@@ -1,0 +1,224 @@
+@import "tailwindcss";
+
+
+:root {
+  --background: #07111f;
+  --foreground: #f8fafc;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  background: var(--background);
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 50% -20%,
+      rgba(34, 211, 238, 0.06),
+      transparent 35%
+    ),
+    var(--background);
+  color: var(--foreground);
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+
+button,
+input {
+  font: inherit;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+
+::selection {
+  background: rgba(34, 211, 238, 0.25);
+  color: #ffffff;
+}
+
+
+/* ---------------------------------------------------------
+   SCROLLBAR
+--------------------------------------------------------- */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: #07111f;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border: 2px solid #07111f;
+  border-radius: 999px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+
+/* ---------------------------------------------------------
+   HERO
+--------------------------------------------------------- */
+
+.hero-glow {
+  position: absolute;
+  top: -220px;
+  right: -140px;
+
+  width: 650px;
+  height: 650px;
+
+  border-radius: 999px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(34, 211, 238, 0.11) 0%,
+      rgba(34, 211, 238, 0.035) 38%,
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+
+.text-gradient {
+  background:
+    linear-gradient(
+      90deg,
+      #67e8f9 0%,
+      #22d3ee 45%,
+      #a5f3fc 100%
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+
+/* ---------------------------------------------------------
+   SHARED TYPOGRAPHY
+--------------------------------------------------------- */
+
+.section-eyebrow {
+  font-size: 0.68rem;
+  line-height: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #22d3ee;
+}
+
+
+/* ---------------------------------------------------------
+   NUMBER INPUT
+--------------------------------------------------------- */
+
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+
+/* ---------------------------------------------------------
+   RECHARTS
+--------------------------------------------------------- */
+
+.recharts-wrapper,
+.recharts-surface {
+  outline: none !important;
+}
+
+
+.recharts-cartesian-axis-tick-value {
+  fill: #64748b;
+}
+
+
+.recharts-tooltip-wrapper {
+  outline: none;
+}
+
+
+/* ---------------------------------------------------------
+   ACCESSIBILITY
+--------------------------------------------------------- */
+
+:focus-visible {
+  outline: 2px solid rgba(34, 211, 238, 0.8);
+  outline-offset: 2px;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 640px) {
+  .hero-glow {
+    top: -150px;
+    right: -300px;
+
+    width: 520px;
+    height: 520px;
+  }
+}
+
+
+/* ---------------------------------------------------------
+   REDUCED MOTION
+--------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
